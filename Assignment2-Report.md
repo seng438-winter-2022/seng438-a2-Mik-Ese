@@ -61,21 +61,21 @@ and the methods tested in the Data Utilities class were:
 - `equals`
     - test
 - `calculateColumnTotal`
-    - calculateColumnTotalNoCols - belongs to the generalized legal inputs partition
-    - calculateColumnTotalAllPosInt - belongs to the generalized legal inputs partition
-    - calculateColumnTotalAllNegInt - belongs to the generalized legal inputs partition
-    - calculateColumnTotalMixedInt - belongs to the generalized legal inputs partition
-    - calculateColumnTotalAllPosDec - belongs to the generalized legal inputs partition
-    - calculateColumnTotalAllNegDec - belongs to the generalized legal inputs partition
-    - calculateColumnTotalMixedDec - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalNoCols` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalAllPosInt` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalAllNegInt` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalMixedInt` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalAllPosDec` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalAllNegDec` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalMixedDec` - belongs to the generalized legal inputs partition
 - `calculateRowTotal`
-    - calculateRowTotalNoRows - belongs to the generalized legal inputs partition
-    - calculateRowTotalAllPosInt - belongs to the generalized legal inputs partition
-    - calculateRowTotalAllNegInt - belongs to the generalized legal inputs partition
-    - calculateRowTotalMixedInt - belongs to the generalized legal inputs partition
-    - calculateRowTotalAllPosDec - belongs to the generalized legal inputs partition
-    - calculateRowTotalAllNegDec - belongs to the generalized legal inputs partition
-    - calculateRowTotalMixedDec - belongs to the generalized legal inputs partition
+    - `calculateRowTotalNoRows` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalAllPosInt` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalAllNegInt` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalMixedInt` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalAllPosDec` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalAllNegDec` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalMixedDec` - belongs to the generalized legal inputs partition
 - `createNumberArray`
     - test
 - `getCumulativePercentages`
