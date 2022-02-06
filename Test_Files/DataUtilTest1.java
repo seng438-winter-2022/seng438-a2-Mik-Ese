@@ -3,9 +3,6 @@ import org.junit.*;
 import org.jmock.*;
 import org.jfree.data.*;
 
-//import org.jfree.data.Range;
-//import org.jfree.data.DataUtilities;
-
 public class DataUtilTest1{
     Mockery mockClass=new Mockery();
     final Values2D table=mockClass.mock(Values2D.class);
@@ -34,27 +31,24 @@ public class DataUtilTest1{
     public void calculateColumnTotalAllNegInt(){
         mockClass.checking(new Expectations(){ {
             one(table).getRowCount();
-            will(returnValue(3));
+            will(returnValue(2));
 
             one(table).getValue(0, 0);
             will(returnValue(-10));   // Row 0 column 0 has value -10
 
             one(table).getValue(1, 0);
-            will(returnValue(-20));   // Row 1 column 1 has value -20
-
-            one(table).getValue(2, 0);
-            will(returnValue(-30));   // Row 2 column 2 has value -30
+            will(returnValue(-20));   // Row 1 column 0 has value -20
         } });
 
-        assertEquals("calculateColumnTotal should return -60.0", DataUtilities.calculateColumnTotal(table, 0),
-                -60.0, 0.000000001d);
+        assertEquals("calculateColumnTotal should return -30.0", DataUtilities.calculateColumnTotal(table, 0),
+                -30.0, 0.000000001d);
     }
 
     @Test
     public void calculateColumnTotalMixedInt(){
         mockClass.checking(new Expectations(){ {
             one(table).getRowCount();
-            will(returnValue(3));
+            will(returnValue(5));
 
             one(table).getValue(0, 0);
             will(returnValue(-1));   // Row 0 column 0 has value -1
@@ -64,6 +58,12 @@ public class DataUtilTest1{
 
             one(table).getValue(2, 0);
             will(returnValue(3));   // Row 2 column 0 has value 3
+
+            one(table).getValue(3, 0);
+            will(returnValue(1));   // Row 3 column 0 has value 1
+
+            one(table).getValue(4, 0);
+            will(returnValue(-1));   // Row 4 column 0 has value -1
         } });
 
         assertEquals("calculateColumnTotal should return 0", DataUtilities.calculateColumnTotal(table, 0),
@@ -74,20 +74,23 @@ public class DataUtilTest1{
     public void calculateColumnTotalAllPosDec(){
         mockClass.checking(new Expectations(){ {
             one(table).getRowCount();
-            will(returnValue(3));
+            will(returnValue(4));
 
             one(table).getValue(0, 0);
-            will(returnValue(2.2));   // Row 0 column 0 has value 2.2
+            will(returnValue(1.1));   // Row 0 column 0 has value 1.1
 
             one(table).getValue(1, 0);
-            will(returnValue(3.3));   // Row 1 column 0 has value 3.3
+            will(returnValue(2.2));   // Row 1 column 0 has value 2.2
 
             one(table).getValue(2, 0);
-            will(returnValue(4.4));   // Row 2 column 0 has value 4.4
+            will(returnValue(3.3));   // Row 2 column 0 has value 3.3
+
+            one(table).getValue(3, 0);
+            will(returnValue(4.4));   // Row 3 column 0 has value 4.4
         } });
 
-        assertEquals("calculateColumnTotal should return 9.9", DataUtilities.calculateColumnTotal(table, 0),
-                9.9, 0.000000001d);
+        assertEquals("calculateColumnTotal should return 11.0", DataUtilities.calculateColumnTotal(table, 0),
+                11.0, 0.000000001d);
     }
 
     @Test
@@ -114,7 +117,7 @@ public class DataUtilTest1{
     public void calculateColumnTotalMixedDec(){
         mockClass.checking(new Expectations(){ {
             one(table).getRowCount();
-            will(returnValue(3));
+            will(returnValue(4));
 
             one(table).getValue(0, 0);
             will(returnValue(-0.77));   // Row 0 column 0 has value -1.6
@@ -124,30 +127,30 @@ public class DataUtilTest1{
 
             one(table).getValue(2, 0);
             will(returnValue(8.8));   // Row 2 column 0 has value -3.55
+
+            one(table).getValue(3, 0);
+            will(returnValue(-6.4));   // Row 3 column 0 has value -6.4
         } });
 
-        assertEquals("calculateColumnTotal should return 10.43", DataUtilities.calculateColumnTotal(table, 0),
-                10.43, 0.000000001d);
+        assertEquals("calculateColumnTotal should return 4.03", DataUtilities.calculateColumnTotal(table, 0),
+                4.03, 0.000000001d);
     }
 
     @Test
     public void calculateRowTotalAllPosInt(){
         mockClass.checking(new Expectations(){ {
             one(table).getColumnCount();
-            will(returnValue(3));
+            will(returnValue(2));
 
             one(table).getValue(0, 0);
             will(returnValue(55));   // Row 0 column 0 has value 55
 
             one(table).getValue(0, 1);
             will(returnValue(55));   // Row 0 column 1 has value 55
-
-            one(table).getValue(0, 2);
-            will(returnValue(55));   // Row 0 column 2 has value 55
         } });
 
-        assertEquals("calculateRowTotal should return 165", DataUtilities.calculateRowTotal(table, 0),
-                165.0, 0.000000001d);
+        assertEquals("calculateRowTotal should return 110", DataUtilities.calculateRowTotal(table, 0),
+                110.0, 0.000000001d);
     }
 
     @Test
@@ -174,7 +177,7 @@ public class DataUtilTest1{
     public void calculateRowTotalMixedInt(){
         mockClass.checking(new Expectations(){ {
             one(table).getColumnCount();
-            will(returnValue(3));
+            will(returnValue(4));
 
             one(table).getValue(0, 0);
             will(returnValue(-6));   // Row 0 column 0 has value -6
@@ -184,10 +187,13 @@ public class DataUtilTest1{
 
             one(table).getValue(0, 2);
             will(returnValue(13));   // Row 0 column 2 has value 13
+
+            one(table).getValue(0, 3);
+            will(returnValue(2));   // Row 0 column 3 has value 2
         } });
 
-        assertEquals("calculateRowTotal should return 0", DataUtilities.calculateRowTotal(table, 0),
-                0.0, 0.000000001d);
+        assertEquals("calculateRowTotal should return 2", DataUtilities.calculateRowTotal(table, 0),
+                2.0, 0.000000001d);
     }
 
     @Test
@@ -214,27 +220,30 @@ public class DataUtilTest1{
     public void calculateRowTotalAllNegDec(){
         mockClass.checking(new Expectations(){ {
             one(table).getColumnCount();
-            will(returnValue(3));
+            will(returnValue(4));
 
             one(table).getValue(0, 0);
             will(returnValue(-0.3));   // Row 0 column 0 has value -0.3
 
             one(table).getValue(0, 1);
-            will(returnValue(-10.6));   // Row 0 column 0 has value -10.6
+            will(returnValue(-10.6));   // Row 0 column 1 has value -10.6
 
             one(table).getValue(0, 2);
-            will(returnValue(-4.5));   // Row 0 column 0 has value -4.5
+            will(returnValue(-4.5));   // Row 0 column 2 has value -4.5
+
+            one(table).getValue(0, 3);
+            will(returnValue(-0.22));   // Row 0 column 3 has value -0.22
         } });
 
-        assertEquals("calculateRowTotal should return -15.4", DataUtilities.calculateRowTotal(table, 0),
-                -15.4, 0.000000001d);
+        assertEquals("calculateRowTotal should return -15.62", DataUtilities.calculateRowTotal(table, 0),
+                -15.62, 0.000000001d);
     }
 
     @Test
     public void calculateRowTotalMixedDec(){
         mockClass.checking(new Expectations(){ {
             one(table).getColumnCount();
-            will(returnValue(3));
+            will(returnValue(5));
 
             one(table).getValue(0, 0);
             will(returnValue(1.5));   // Row 0 column 0 has value 1.5
@@ -244,9 +253,15 @@ public class DataUtilTest1{
 
             one(table).getValue(0, 2);
             will(returnValue(-3.3));   // Row 0 column 2 has value -3.3
+
+            one(table).getValue(0, 3);
+            will(returnValue(0.44));   // Row 0 column 3 has value 0.44
+
+            one(table).getValue(0, 4);
+            will(returnValue(-10.7));   // Row 0 column 4 has value -10.7
         } });
 
-        assertEquals("calculateRowTotal should return -4.3", DataUtilities.calculateRowTotal(table, 0),
-                -4.3, 0.000000001d);
+        assertEquals("calculateRowTotal should return -14.56", DataUtilities.calculateRowTotal(table, 0),
+                -14.56, 0.000000001d);
     }
 }
