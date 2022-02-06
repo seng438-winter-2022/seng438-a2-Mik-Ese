@@ -148,4 +148,10 @@ public class DataUtilitiesTest {
 		KeyedValues j = DataUtilities.getCumulativePercentages(data);
 		assertEquals("The value at index 0 should be -0.1", -0.1, j.getValue(0).doubleValue(), .000000001d);
 	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void nullValuesShouldRaiseIllegalArgumentException() {
+		final KeyedValues data = null;
+		DataUtilities.getCumulativePercentages(data);
+	}
 }
