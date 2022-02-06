@@ -2,12 +2,12 @@
 
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
-| Group \#:      |     |
+| Group \#:      |27|
 | -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+|Michele|Esercitato|
+|Dylan|Mah|
+|Faisal|Hossain|
+|Cheyenne|Goh|
 
 # 1 Introduction
 
