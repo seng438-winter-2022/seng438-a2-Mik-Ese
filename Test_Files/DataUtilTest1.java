@@ -6,7 +6,7 @@ import org.jfree.data.*;
 //import org.jfree.data.Range;
 //import org.jfree.data.DataUtilities;
 
-public class MyClass{
+public class DataUtilTest1{
     Mockery mockClass=new Mockery();
     final Values2D table=mockClass.mock(Values2D.class);
 
