@@ -21,7 +21,7 @@
 This lab was used to teach students about unit testing designed using black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. Additionally it familiarized the students with Eclipse IDE, for Java development. Before the lab we were aware of the utilization of JUnit 4 to perform unit tests. Over the course of the lab, we gained experience with Mock Frameworks using the JMock library provided. With this we tested certain classes within the JFreeChart library.
 
 # 2 Detailed description of unit test strategy
-The Unit testes were devised according to the principles of black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. We partitioned our test inputs into 3 subsets, One had generalized legal inputs, another tested near the boundaries including both legal and illegal inputs, and the last tested the boundaries themselves.
+The Unit testes were devised according to the principles of black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. We partitioned our test inputs into 3 subsets, One had generalized legal inputs, another tested inputs near the boundaries which includes legal and illegal inputs, and the last tested the boundaries themselves.
 
 // including the input partitions you have designed
 
@@ -31,31 +31,31 @@ The tests followed the [Test Plan]() which as specified in section 1.1.1,
 the methods tested in the Range class were:
 - `getCentralValue`
     - `centralValueShouldBeZero` - belongs to the generalized legal inputs partition
-    - `centralValueShouldBeOnePointFive` - 
-    - `centralValueShouldBeNegOnePointFive` - 
-    - `centralValueShouldNotBeAboveZero` - 
-    - `centralValueShouldNotBeBelowZero` - 
-    - `centralValueShouldBeFiveHundMil` - 
+    - `centralValueShouldBeOnePointFive` - belongs to the generalized legal inputs partition
+    - `centralValueShouldBeNegOnePointFive` - belongs to the generalized legal inputs partition
+    - `centralValueShouldNotBeAboveZero` - belongs to the inputs near boundaries partition
+    - `centralValueShouldNotBeBelowZero` - belongs to the inputs near boundaries partition
+    - `centralValueShouldBeFiveHundMil` - belongs to the generalized legal inputs partition
 - `getUpperBound`
-    - `upperBoundShouldBeOne` - 
-    - `upperBoundShouldNotBeAboveOne` - 
-    - `upperBoundShouldNotBeBelowOne` - 
-    - `upperBoundShouldBeTwoBil` - 
+    - `upperBoundShouldBeOne` - belongs to the boundary inputs partition
+    - `upperBoundShouldNotBeAboveOne` - belongs to the inputs near boundaries partition
+    - `upperBoundShouldNotBeBelowOne` - belongs to the inputs near boundaries partition
+    - `upperBoundShouldBeTwoBil` - belongs to the boundary inputs partition
 - `getLowerBound`
-    - `lowerBoundShouldBeNegOne` - 
-    - `lowerBoundShouldNotBeAboveNegOne` - 
-    - `lowerBoundShouldNotBeBelowNegOne` - 
-    - `lowerBoundShouldBeNegOneBil` - 
+    - `lowerBoundShouldBeNegOne` - belongs to the boundary inputs partition
+    - `lowerBoundShouldNotBeAboveNegOne` - belongs to the inputs near boundaries partition
+    - `lowerBoundShouldNotBeBelowNegOne` - belongs to the inputs near boundaries partition
+    - `lowerBoundShouldBeNegOneBil` -belongs to the boundary inputs partition
 - `contains`
-    - `rangeShouldContainZeroPointNine` - 
-    - `rangeShouldContainNegZeroPointNine` - 
-    - `rangeShouldNotContainValHigherThanOne` - 
-    - `rangeShouldNotContainValLowerThanNegOne` - 
+    - `rangeShouldContainZeroPointNine` - belongs to the generalized legal inputs partition
+    - `rangeShouldContainNegZeroPointNine` - belongs to the generalized legal inputs partition
+    - `rangeShouldNotContainValHigherThanOne` - belongs to the inputs near boundaries partition
+    - `rangeShouldNotContainValLowerThanNegOne` - belongs to the inputs near boundaries partition
 - `isNaNRange`
-    - `neitherBoudryIsNaN` - 
-    - `lowerBoundryIsNotNaNUpperBoudryIsNaN` - 
-    - `lowerBoundryIsNaNUpperBoudryIsNotNaN` - 
-    - `rangeBoundriesAreNaN` - 
+    - `neitherBoudryIsNaN` - belongs to the generalized legal inputs partition
+    - `lowerBoundryIsNotNaNUpperBoudryIsNaN` - belongs to the inputs near boundaries partition
+    - `lowerBoundryIsNaNUpperBoudryIsNotNaN` - belongs to the inputs near boundaries partition
+    - `rangeBoundriesAreNaN` - belongs to the boundary inputs partition
 
 and the methods tested in the Data Utilities class were:
 - `equals`
@@ -67,11 +67,11 @@ and the methods tested in the Data Utilities class were:
 - `createNumberArray`
     - test
 - `getCumulativePercentages`
-    - cumulativePercentageAtZeroShouldBeTenPercent
-    - cumulativePercentageAtOneShouldBeOneHundredPercent
-    - keyAtZeroShouldBeEleven
-    - keyAtOneShouldBeTwentyTwo
-    - cumulativePercentageAtZeroShouldBeNegTenPercent
+    - `cumulativePercentageAtZeroShouldBeTenPercent` - 
+    - `cumulativePercentageAtOneShouldBeOneHundredPercent` - 
+    - `keyAtZeroShouldBeEleven` - 
+    - `keyAtOneShouldBeTwentyTwo` - 
+    - `cumulativePercentageAtZeroShouldBeNegTenPercent` - 
 
 The tests developed are detailed in the [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/TestCase.xls).
 
