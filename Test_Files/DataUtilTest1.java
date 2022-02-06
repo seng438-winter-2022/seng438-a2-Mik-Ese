@@ -3,9 +3,21 @@ import org.junit.*;
 import org.jmock.*;
 import org.jfree.data.*;
 
-public class DataUtilTest1{
+public class MyClass{
     Mockery mockClass=new Mockery();
     final Values2D table=mockClass.mock(Values2D.class);
+
+    // Column test cases
+    @Test
+    public void calculateColumnTotalNoCols(){
+        mockClass.checking(new Expectations(){ {
+            one(table).getRowCount();
+            will(returnValue(0));
+        } });
+
+        assertEquals("calculateColumnTotal should return 0.0", DataUtilities.calculateColumnTotal(table, 0),
+                0.0, 0.000000001d);
+    }
 
     @Test
     public void calculateColumnTotalAllPosInt(){
@@ -134,6 +146,19 @@ public class DataUtilTest1{
 
         assertEquals("calculateColumnTotal should return 4.03", DataUtilities.calculateColumnTotal(table, 0),
                 4.03, 0.000000001d);
+    }
+
+
+    // Row test cases
+    @Test
+    public void calculateRowTotalNoRows(){
+        mockClass.checking(new Expectations(){ {
+            one(table).getColumnCount();
+            will(returnValue(0));
+        } });
+
+        assertEquals("calculateRowTotal should return 0.0", DataUtilities.calculateRowTotal(table, 0),
+                0.0, 0.000000001d);
     }
 
     @Test
