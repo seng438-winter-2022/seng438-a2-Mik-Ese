@@ -21,7 +21,7 @@
 This lab was used to teach students about unit testing designed using black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. Additionally it familiarized the students with Eclipse IDE, for Java development. Before the lab we were aware of the utilization of JUnit 4 to perform unit tests. Over the course of the lab, we gained experience with Mock Frameworks using the JMock library provided. With this we tested certain classes within the JFreeChart library.
 
 # 2 Detailed description of unit test strategy
-The Unit testes were devised according to the principles of black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. We partitioned our test inputs into 3 subsets, One had generalized legal inputs, another tested inputs near the boundaries which includes legal and illegal inputs, and the last tested the boundaries themselves.
+The Unit testes were devised according to the principles of black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. We partitioned our test inputs into 3 subsets, One had generalized legal inputs, another tested inputs near the boundaries which includes legal and illegal inputs, and the last tested the boundaries themselves with both legal and illegal inputs.
 
 // including the input partitions you have designed
 
@@ -37,32 +37,32 @@ the methods tested in the Range class were:
     - `centralValueShouldNotBeBelowZero` - belongs to the inputs near boundaries partition
     - `centralValueShouldBeFiveHundMil` - belongs to the generalized legal inputs partition
 - `getUpperBound`
-    - `upperBoundShouldBeOne` - belongs to the boundary inputs partition
+    - `upperBoundShouldBeOne` - belongs to the boundary inputs partition (legal)
     - `upperBoundShouldNotBeAboveOne` - belongs to the inputs near boundaries partition
     - `upperBoundShouldNotBeBelowOne` - belongs to the inputs near boundaries partition
-    - `upperBoundShouldBeTwoBil` - belongs to the boundary inputs partition
+    - `upperBoundShouldBeTwoBil` - belongs to the boundary inputs partition (legal)
 - `getLowerBound`
-    - `lowerBoundShouldBeNegOne` - belongs to the boundary inputs partition
+    - `lowerBoundShouldBeNegOne` - belongs to the boundary inputs partition (legal)
     - `lowerBoundShouldNotBeAboveNegOne` - belongs to the inputs near boundaries partition
     - `lowerBoundShouldNotBeBelowNegOne` - belongs to the inputs near boundaries partition
-    - `lowerBoundShouldBeNegOneBil` -belongs to the boundary inputs partition
+    - `lowerBoundShouldBeNegOneBil` -belongs to the boundary inputs partition (legal)
 - `contains`
     - `rangeShouldContainZeroPointNine` - belongs to the generalized legal inputs partition
     - `rangeShouldContainNegZeroPointNine` - belongs to the generalized legal inputs partition
-    - `rangeShouldNotContainValHigherThanOne` - belongs to the inputs near boundaries partition
-    - `rangeShouldNotContainValLowerThanNegOne` - belongs to the inputs near boundaries partition
+    - `rangeShouldNotContainValHigherThanOne` - belongs to the inputs near boundaries partition (legal)
+    - `rangeShouldNotContainValLowerThanNegOne` - belongs to the inputs near boundaries partition (legal)
 - `isNaNRange`
     - `neitherBoudryIsNaN` - belongs to the generalized legal inputs partition
-    - `lowerBoundryIsNotNaNUpperBoudryIsNaN` - belongs to the inputs near boundaries partition
-    - `lowerBoundryIsNaNUpperBoudryIsNotNaN` - belongs to the inputs near boundaries partition
-    - `rangeBoundriesAreNaN` - belongs to the boundary inputs partition
+    - `lowerBoundryIsNotNaNUpperBoudryIsNaN` - belongs to the inputs near boundaries partition (legal)
+    - `lowerBoundryIsNaNUpperBoudryIsNotNaN` - belongs to the inputs near boundaries partition (legal)
+    - `rangeBoundriesAreNaN` - belongs to the boundary inputs partition (legal)
 
 and the methods tested in the Data Utilities class were:
 - `equals`
     - `checkTwoArraysEqual` - belongs to the generalized legal inputs partition
-    - `checkTwoArraysEqualNull` - belongs to the generalized legal inputs partition
-    - `checkTwoArraysEqualNaN` - belongs to the generalized legal inputs partition
-    - `checkTwoArraysEqualEmpty` - belongs to the generalized legal inputs partition
+    - `checkTwoArraysEqualNull` - belongs to the boundary inputs partition (legal)
+    - `checkTwoArraysEqualNaN` - belongs to the boundary inputs partition (legal)
+    - `checkTwoArraysEqualEmpty` - belongs to the boundary inputs partition (legal)
     - `checkTwoArraysNotEqual` - belongs to the generalized legal inputs partition
 - `calculateColumnTotal`
     - `calculateColumnTotalForFiveValues` - belongs to the generalized legal inputs partition
@@ -88,17 +88,18 @@ and the methods tested in the Data Utilities class were:
     - `createNumberArraysEqualBigNeg` - belongs to the generalized legal inputs partition
     - `createNumberArraysEqualDecimal` - belongs to the generalized legal inputs partition
     - `createBigNumberArrays` - belongs to the generalized legal inputs partition
-    - `createNumberArraysNullException`  - belongs to the generalized legal inputs partition
-    - `createNumberArrayBiggestDoubleValues` belongs to the boundaries partition
-    - `createNumberArrayLowestDoubleValues` belongs to the boundaries partition
+    - `createNumberArraysNullException`  - belongs to the boundary inputs partition (illegal)
+    - `createNumberArrayBiggestDoubleValues` - belongs to the boundary inputs partition (legal)
+    - `createNumberArrayLowestDoubleValues` - belongs to the boundary inputs partition (legal)
 - `getCumulativePercentages`
-    - `cumulativePercentageAtZeroShouldBeTenPercent` - 
-    - `cumulativePercentageAtOneShouldBeOneHundredPercent` - 
-    - `keyAtZeroShouldBeEleven` - 
-    - `keyAtOneShouldBeTwentyTwo` - 
-    - `cumulativePercentageAtZeroShouldBeNegTenPercent` - 
+    - `cumulativePercentageAtZeroShouldBeTenPercent` - belongs to the generalized legal inputs partition
+    - `cumulativePercentageAtOneShouldBeOneHundredPercent` - belongs to the boundary inputs partition (legal)
+    - `keyAtZeroShouldBeEleven` - belongs to the generalized legal inputs partition
+    - `keyAtOneShouldBeTwentyTwo` - belongs to the generalized legal inputs partition
+    - `cumulativePercentageAtZeroShouldBeNegTenPercent` - belongs to the generalized legal inputs partition
+    - `nullValuesShouldRaiseIllegalArgumentException` - belongs to the boundary inputs partition (illegal)
 
-The tests developed are detailed in the [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/TestCase.xls).
+The tests developed are detailed in the [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/SENG438%20A2%20Test%20Cases.xlsx).
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
