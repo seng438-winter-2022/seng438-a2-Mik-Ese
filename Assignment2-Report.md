@@ -23,8 +23,6 @@ This lab was used to teach students about unit testing designed using black-box 
 # Detailed description of unit test strategy
 The Unit testes were devised according to the principles of black-box testing, Equivalence Class Testing(ECT), and Boundary Value Testing. We partitioned our test inputs into 3 subsets, One had generalized legal inputs, another tested inputs near the boundaries which includes legal and illegal inputs, and the last tested the boundaries themselves with both legal and illegal inputs.
 
-// including the input partitions you have designed
-
 # Test cases developed
 The test cases built, were for the `Range` class and the `DataUtilities` class contained in the `JFreeChart` library.\
 The tests followed the [Test Plan](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/Assignment%202%20-%20Test%20Plan.pdf) which as specified in section 1.1.1, 
