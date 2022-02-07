@@ -26,8 +26,8 @@ The Unit testes were devised according to the principles of black-box testing, E
 // including the input partitions you have designed
 
 # 3 Test cases developed
-The test cases built, were for the `Range` class and the `DataUtilities` class contained in the `JFreeChart` library.
-The tests followed the [Test Plan]() which as specified in section 1.1.1, 
+The test cases built, were for the `Range` class and the `DataUtilities` class contained in the `JFreeChart` library.\
+The tests followed the [Test Plan](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/Assignment%202%20-%20Test%20Plan.pdf) which as specified in section 1.1.1, 
 the methods tested in the Range class were:
 - `getCentralValue`
     - `centralValueShouldBeZero` - belongs to the generalized legal inputs partition
@@ -103,10 +103,6 @@ The tests developed are detailed in the [Here in XLSX](https://github.com/seng43
 
 The Project is archived and downloadable [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/Assignment2_ProjectFiles.zip).
 The individual Java test files for the [Range](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/RangeTest.java) class and the [DataUtilities](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/DataUtilitiesTest.java) class.
-
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
 Everyone worked together to write up the Test Plan and decide the pairs.
