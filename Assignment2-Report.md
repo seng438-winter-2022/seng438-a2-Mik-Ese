@@ -99,7 +99,10 @@ and the methods tested in the Data Utilities class were:
     - `cumulativePercentageAtZeroShouldBeNegTenPercent` - belongs to the generalized legal inputs partition
     - `nullValuesShouldRaiseIllegalArgumentException` - belongs to the boundary inputs partition (illegal)
 
-The tests developed are detailed in the [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/SENG438%20A2%20Test%20Cases.xlsx).
+The tests developed are detailed in the [Here in XLSX](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/SENG438%20A2%20Test%20Cases.xlsx) and [Here in PDF](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/SENG438%20A2%20Test%20Cases.pdf).
+
+The Project is archived and downloadable [Here](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/Assignment2_ProjectFiles.zip).
+The individual Java test files for the [Range](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/RangeTest.java) class and the [DataUtilities](https://github.com/seng438-winter-2022/seng438-a2-Mik-Ese/blob/main/DataUtilitiesTest.java) class.
 
 // write down the name of the test methods and classes. Organize the based on
 the source code method // they test. identify which tests cover which partitions
