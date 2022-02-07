@@ -59,8 +59,13 @@ the methods tested in the Range class were:
 
 and the methods tested in the Data Utilities class were:
 - `equals`
-    - test
+    - `checkTwoArraysEqual` - belongs to the generalized legal inputs partition
+    - `checkTwoArraysEqualNull` - belongs to the generalized legal inputs partition
+    - `checkTwoArraysEqualNaN` - belongs to the generalized legal inputs partition
+    - `checkTwoArraysEqualEmpty` - belongs to the generalized legal inputs partition
+    - `checkTwoArraysNotEqual` - belongs to the generalized legal inputs partition
 - `calculateColumnTotal`
+    - `calculateColumnTotalForFiveValues` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalNoCols` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalAllPosInt` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalAllNegInt` - belongs to the generalized legal inputs partition
@@ -77,7 +82,15 @@ and the methods tested in the Data Utilities class were:
     - `calculateRowTotalAllNegDec` - belongs to the generalized legal inputs partition
     - `calculateRowTotalMixedDec` - belongs to the generalized legal inputs partition
 - `createNumberArray`
-    - test
+    - `createNumberArrayTest` - belongs to the generalized legal inputs partition
+    - `createNumberArraysNotEqual` - belongs to the generalized legal inputs partition
+    - `createNumberArraysEqualBig` - belongs to the generalized legal inputs partition
+    - `createNumberArraysEqualBigNeg` - belongs to the generalized legal inputs partition
+    - `createNumberArraysEqualDecimal` - belongs to the generalized legal inputs partition
+    - `createBigNumberArrays` - belongs to the generalized legal inputs partition
+    - `createNumberArraysNullException`  - belongs to the generalized legal inputs partition
+    - `createNumberArrayBiggestDoubleValues` belongs to the boundaries partition
+    - `createNumberArrayLowestDoubleValues` belongs to the boundaries partition
 - `getCumulativePercentages`
     - `cumulativePercentageAtZeroShouldBeTenPercent` - 
     - `cumulativePercentageAtOneShouldBeOneHundredPercent` - 
