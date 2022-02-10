@@ -65,6 +65,8 @@ and the methods tested in the Data Utilities class were:
 - `calculateColumnTotal`
     - `calculateColumnTotalForFiveValues` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalNoCols` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalNegCol` - belongs to the generalized legal inputs partition
+    - `calculateColumnTotalColOutOfBounds` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalAllPosInt` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalAllNegInt` - belongs to the generalized legal inputs partition
     - `calculateColumnTotalMixedInt` - belongs to the generalized legal inputs partition
@@ -73,6 +75,8 @@ and the methods tested in the Data Utilities class were:
     - `calculateColumnTotalMixedDec` - belongs to the generalized legal inputs partition
 - `calculateRowTotal`
     - `calculateRowTotalNoRows` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalNegRow` - belongs to the generalized legal inputs partition
+    - `calculateRowTotalRowOutOfBounds` - belongs to the generalized legal inputs partition
     - `calculateRowTotalAllPosInt` - belongs to the generalized legal inputs partition
     - `calculateRowTotalAllNegInt` - belongs to the generalized legal inputs partition
     - `calculateRowTotalMixedInt` - belongs to the generalized legal inputs partition
